@@ -14,6 +14,7 @@ Let's dive into setting up a robust local development environment suitable for b
 - [2. Ollama Installation for Local Models](#2-ollama-installation-for-local-models)
   - [Installation Instructions](#installation-instructions)
   - [Post-Installation Verification](#post-installation-verification)
+  - [API verification](#api-verification)
 - [3. Integrated Development Environment (IDE) Setup](#3-integrated-development-environment-ide-setup)
   - [IDE Choice and Update](#ide-choice-and-update)
   - [Required Extensions (VS Code/Cursor)](#required-extensions-vs-codecursor)
@@ -63,6 +64,21 @@ ollama run llama3:8b
 
 This command downloads the model if it's not present and starts an interactive chat session via ***terminal/CMD***.
 
+
+### API verification
+You can run below curl command from terminal or use any availale HTTP Client tool to mimic below request and send the message to Ollama API. 
+  * If the provided LLM model is available locally, `Ollama` with run the model and servs the request. While running model in this way Ollama sets a default max-life of 4 Minutes for that model post which the model will be terminated automatically.
+  * `Stream` property is be default set to `True`. This enables the Ollama to keep sending the data to terminal as the model thinks and generates the response but if set to `False` it will process the request and send only the final response back to requestor.
+
+```bash
+curl http://localhost:11434/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gemma3:1b",
+    "messages": [{"role": "user", "content": "Tell me a fun fact"}],
+    "stream": false
+  }'
+```
 ---
 
 ## 3\. Integrated Development Environment (IDE) Setup
