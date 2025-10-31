@@ -4,6 +4,7 @@ permalink: AI-ML/llm/_topics/t0-introduction-to-llms.md
 layout: course-content
 date: 2025-10-31
 categories: llm-engineering
+tags: [prompt-engineering, rag, fine-tuning, hallucination, risk, markdown]
 ---
 
 # LLM Engineering Session Notes - Architectures, Prompting, and Reasoning

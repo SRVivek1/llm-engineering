@@ -3,6 +3,7 @@ title: LLM Engineering Local Environment Setup Guide
 permalink: AI-ML/llm/_topics/a1-local-setup.md
 layout: course-content
 date: October 30, 2025
+tags: [ollama, gemma3, python, uv, openai, api, visula studio code, vscode]
 ---
 
 Let's dive into setting up a robust local development environment suitable for begineer/intermediate LLM engineering tasks. We focus on modern, efficient tools like **Ollama** for running models locally and **uv** as an ultrafast python package manager.
