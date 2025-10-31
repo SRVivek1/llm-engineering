@@ -1,6 +1,6 @@
 ---
 title: LLM Engineering Local Environment Setup Guide
-permalink: AI-ML/llm/_topics/a1-local-setup.md
+permalink: ai-ml/llm/_topics/a1-local-setup.md
 layout: course-content
 date: October 30, 2025
 tags: [ollama, gemma3, python, uv, openai, api, visula studio code, vscode]
