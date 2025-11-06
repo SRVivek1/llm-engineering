@@ -1,19 +1,25 @@
-# LLM Engineering Session Notes - Advanced Concepts and Optimizations
+# LLM Engineering - Advanced Concepts and Optimizations
 
 Welcome to the comprehensive notes from our LLM Engineering session. This document transforms raw discussion points into a structured, educational resource for intermediate-level LLM developers and researchers. We focus on optimizing LLM applications for **performance**, **cost**, and **quality**.
 
 ## Table of Contents
 
-1.  [Core LLM Engineering Concepts](https://www.google.com/search?q=%23core-llm-engineering-concepts)
-2.  [🚀 Advanced Optimization: Prompt Caching](https://www.google.com/search?q=%23advanced-optimization-prompt-caching)
-      * [How Prompt Caching Works](https://www.google.com/search?q=%23how-prompt-caching-works)
-      * [Provider Implementations: OpenAI, Gemini, and Others](https://www.google.com/search?q=%23provider-implementations-openai-gemini-and-others)
-      * [Implicit vs. Explicit Caching](https://www.google.com/search?q=%23implicit-vs-explicit-caching)
-      * [Effective Prompt Caching Strategy](https://www.google.com/search?q=%23effective-prompt-caching-strategy)
-3.  [Context Augmentation: Fine-Tuning vs. RAG](https://www.google.com/search?q=%23context-augmentation-fine-tuning-vs-rag)
-4.  [Quality Assurance: Evaluation Metrics](https://www.google.com/search?q=%23quality-assurance-evaluation-metrics)
-5.  [Ecosystem Tools](https://www.google.com/search?q=%23ecosystem-tools)
-6.  [Operational Challenges](https://www.google.com/search?q=%23operational-challenges)
+- [LLM Engineering - Advanced Concepts and Optimizations](#llm-engineering---advanced-concepts-and-optimizations)
+  - [Table of Contents](#table-of-contents)
+  - [1. Core LLM Engineering Concepts](#1-core-llm-engineering-concepts)
+    - [1.1 Prompt Engineering: Key Techniques](#11-prompt-engineering-key-techniques)
+  - [2. 🚀 Advanced Optimization: Prompt Caching](#2--advanced-optimization-prompt-caching)
+    - [How Prompt Caching Works](#how-prompt-caching-works)
+    - [Provider Implementations: OpenAI, Gemini, and Others](#provider-implementations-openai-gemini-and-others)
+    - [Implicit vs. Explicit Caching](#implicit-vs-explicit-caching)
+    - [How to Effectively Use Prompt Caching](#how-to-effectively-use-prompt-caching)
+  - [3. Context Augmentation: Fine-Tuning vs. RAG](#3-context-augmentation-fine-tuning-vs-rag)
+  - [4. Quality Assurance: Evaluation Metrics](#4-quality-assurance-evaluation-metrics)
+    - [Classical Language Generation Metrics](#classical-language-generation-metrics)
+    - [Modern LLM Evaluation](#modern-llm-evaluation)
+  - [5. Ecosystem Tools](#5-ecosystem-tools)
+  - [6. Operational Challenges](#6-operational-challenges)
+  - [Key Takeaways](#key-takeaways)
 
 -----
 
@@ -107,7 +113,7 @@ When an LLM lacks the specific, up-to-date, or proprietary knowledge required fo
 
 Measuring the performance of LLM outputs is challenging due to the open-ended nature of generation. We rely on a mix of classical and modern metrics.
 
-### \#\#\# Classical Language Generation Metrics
+### Classical Language Generation Metrics
 
 These compare the generated output (`candidate`) to a human-written target (`reference`).
 
@@ -115,7 +121,7 @@ These compare the generated output (`candidate`) to a human-written target (`ref
   * **BLEU (Bilingual Evaluation Understudy):** Measures the precision of $n$-grams (sequences of $n$ words) in the candidate text against the reference text. It is excellent for **translation** tasks but often a poor metric for open-ended generation, as a fluent and correct answer can still receive a low BLEU score if it uses different phrasing than the reference.
   * **ROUGE (Recall-Oriented Understudy for Gisting Evaluation):** Focuses on the recall of $n$-grams (i.e., how many $n$-grams in the reference are present in the candidate). It is the standard metric for **summarization**.
 
-### \#\#\# Modern LLM Evaluation
+### Modern LLM Evaluation
 
   * **Human Evaluation:** The gold standard. Evaluators rate responses on dimensions like **Helpfulness**, **Factuality**, and **Safety**.
   * **LLM-as-a-Judge:** Using a powerful LLM (e.g., GPT-4 or Gemini Advanced) to evaluate the output of a less powerful model. This is faster and cheaper than human evaluation and has shown high correlation with human scores, particularly for coherence and helpfulness.
