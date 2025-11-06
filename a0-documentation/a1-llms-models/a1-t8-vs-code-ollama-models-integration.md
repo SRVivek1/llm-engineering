@@ -1,6 +1,6 @@
 ---
 title: "Local AI Coding Setup: Continue Extension with Ollama in VS Code"
-permalink: ai-ml/llm/_topics/
+permalink: ai-ml/llm/_topics/a1-t8-vs-code-ollama-models-integration.md
 layout: course-content
 date: 2025-10-31
 categories: llm-engineering
