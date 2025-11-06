@@ -1,3 +1,11 @@
+---
+title: "LLM Engineering - Advanced Concepts & Deployment"
+permalink: ai-ml/llm/_topics/a1-t7-advance-conectps-models-deployments.md
+layout: course-content
+date: 2025-10-31
+categories: llm-engineering
+tags: [prompt-engineering, markdown]
+---
 # 🤖 LLM Engineering - Advanced Concepts & Deployment
 
 ## Table of Contents

@@ -1,3 +1,12 @@
+---
+title: "Local AI Coding Setup: Continue Extension with Ollama in VS Code"
+permalink: ai-ml/llm/_topics/
+layout: course-content
+date: 2025-10-31
+categories: llm-engineering
+tags: [prompt-engineering, markdown]
+---
+
 # Local AI Coding Setup: Continue Extension with Ollama in VS Code
 
 [![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) [![Ollama](https://img.shields.io/badge/Ollama-FF6B35?style=for-the-badge&logo=ollama&logoColor=white)](https://ollama.com/) [![Continue](https://img.shields.io/badge/Continue-0E1116?style=for-the-badge&logo=continue&logoColor=white)](https://continue.dev/)
@@ -237,5 +246,7 @@ For deep dives, check [Continue Docs](https://docs.continue.dev/) or [Ollama Gui
 
 Questions? Drop a comment or ping on [Continue Discord](https://discord.gg/continue). Happy local coding! 🛠️✨
 
-*Last Updated: November 06, 2025*  
-*Built with ❤️ for offline devs*
+
+
+```
+```
