@@ -145,7 +145,8 @@ models:
   - name: Qwen2.5-Coder 1.5B
     provider: ollama
     model: qwen2.5-coder:1.5b-base
-    # Comment below autocomplete role, if enabled it will keep running the configured model.
+    # Note: Comment out below autocomplete role if facing performance issues. 
+    # If enabled it will keep running the configured model.
     # Resulting in consuming a lot of CPU and RAM, specially if you have limited resources.
     roles:
       - autocomplete
