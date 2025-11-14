@@ -1,10 +1,11 @@
 ---
-title: "Local AI Coding Setup: Continue Extension with Ollama in VS Code"
+title: "Ollama LLMs - Connect with IDE"
+tagLine: "Connect your IDE (eg. VS CODE, IntelliJ IDE) with local LLM for coding assistant."
 permalink: ai-ml/llm/_topics/a1-t8-vs-code-ollama-models-integration.md
 layout: course-content
 date: 2025-10-31
 categories: llm-engineering
-tags: [prompt-engineering, markdown]
+tags: [llm-engineering, ollama, vs code, intellij, local ai assistant, continue plugin]
 ---
 
 # Local AI Coding Setup: Continue Extension with Ollama in VS Code
