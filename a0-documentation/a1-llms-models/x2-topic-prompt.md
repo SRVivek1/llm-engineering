@@ -1,17 +1,13 @@
----
-Video: 43
-Time: 
-topic: Build data science UIs
-file: b3-t0-no-frontend-code-ui-introduction.ipynb
----
+# Build data science UIs
 
-# Explain and discuss below topics also include related relavant information, tech / framework which learnr should be aware of.
+# Overview of data science UIs
 
-## Frameworks (UI for Non-frontend skills people)
+# Frameworks (UI for Non-frontend skills people)
 * Gradio (favourite)
 * Streamlit
 
-## What is gradio ui ?
+# Introduction to gradio ui framework
+# What is gradio ui ?
 * Gradio from Hugging faces is a python framework
 
 
@@ -24,24 +20,6 @@ file: b3-t0-no-frontend-code-ui-introduction.ipynb
 * Quick start: 
   * https://www.gradio.app/guides/quickstart#building-your-first-demo
 
-
-
-# Interation with LLM with frontend models
-
-
-
-
-
------
-
----
-Video: 44
-Time: 
-topic: Build data science UIs
-file: b3-t1-gradio-ui-hosting-hugging-faces.ipynb
----
-
-# Introduction to gradio ui framework
 
 # Hello world app for gradio
 * Reference: https://www.gradio.app/guides/quickstart#building-your-first-demo
@@ -73,12 +51,6 @@ file: b3-t1-gradio-ui-hosting-hugging-faces.ipynb
 demo.launch(shared=True)
 ```
 
----
-Video: 45
-Time: 
-topic: Build data science UIs
-file: b3-t1-gradio-ui-integrate-with-llm.ipynb
----
 
 ## Authentication in gradio
 
