@@ -25,13 +25,6 @@ file: b3-t0-no-frontend-code-ui-introduction.ipynb
   * https://www.gradio.app/guides/quickstart#building-your-first-demo
 
 
-
-# Interation with LLM with frontend models
-
-
-
-
-
 -----
 
 ---
