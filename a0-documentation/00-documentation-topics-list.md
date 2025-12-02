@@ -21,4 +21,5 @@
 ---
 
 ## Gradio UI
-- 
+- Introduction
+- Integrating LLM models in UI

@@ -1,8 +1,10 @@
 ---
-Video: 45
-Time: 
-topic: Build data science UIs
-file: b3-t1-gradio-ui-integrate-with-llm.ipynb
+Video: 46
+Time: TBS
+topic: Markdown responses and streaming
+file: 
+    - b3-t3-gradio-markdown-response.ipynb
+    - b3-t4-gradio-response-streaming.ipynb
 ---
 
 
