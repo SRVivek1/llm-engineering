@@ -1,4 +1,4 @@
-# SpecKit Developer Guide
+# Spec-Kit Developer Guide
 ### Spec Driven Development with Claude Code
 
 **Audience**: Experienced Java / Python developers, new to SDD and Spec-Kit  
@@ -130,9 +130,60 @@ specs/
 
 ## 3. Project Setup (One-Time)
 
-Before you use any Spec-Kit commands, your project needs the `.specify/` directory structure. This is already present if you started from the Spec-Kit template.
+### Prerequisites
 
-**Verify setup:**
+Before installing Spec-Kit, ensure you have:
+
+- Python 3.11 or later
+- [uv](https://docs.astral.sh/uv/) package manager
+- Git
+
+### Step 1 — Install the Spec-Kit CLI
+
+Install `specify-cli` as a persistent uv tool, pinned to a specific release:
+
+```bash
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@vX.Y.Z
+```
+
+Replace `vX.Y.Z` with the latest release version from the [Spec-Kit releases page](https://github.com/github/spec-kit/releases).
+
+> **Important**: Only install from the official GitHub repository. PyPI packages with similar names are not affiliated with Spec-Kit and are not supported.
+
+Verify the installation:
+
+```bash
+specify version
+```
+
+**Upgrading later**: Use the same command with `--force` to upgrade to a newer version:
+
+```bash
+uv tool install specify-cli --force --from git+https://github.com/github/spec-kit.git@vX.Y.Z
+```
+
+### Step 2 — Initialize Spec-Kit in your project
+
+Navigate to your project directory, then run:
+
+```bash
+specify init --here --ai claude
+```
+
+- `--here` initializes Spec-Kit in the current directory rather than creating a subdirectory
+- `--ai claude` scaffolds the `.specify/` folder with Claude Code slash commands and AI-ready templates
+
+This creates the entire `.specify/` directory structure and registers git hooks. You only run this once per project.
+
+Alternatively, if you want to initialize into a named subdirectory:
+
+```bash
+specify init my-project --ai claude
+```
+
+### Step 3 — Verify setup
+
+After initialization, confirm the following structure exists:
 
 ```
 .specify/
@@ -143,7 +194,27 @@ Before you use any Spec-Kit commands, your project needs the `.specify/` directo
 └── extensions.yml         ← git hook configuration
 ```
 
-If this directory is missing, Spec-Kit commands will fail. Contact your project maintainer or follow the Spec-Kit installation guide.
+If the structure is missing or incomplete, re-run `specify init --here --ai claude` or check the install with `specify version`.
+
+### Step 4 — Open in Claude Code and begin
+
+```bash
+claude .
+```
+
+You are now ready to run `/speckit-constitution` as the first Spec-Kit command.
+
+---
+
+### Joining an Existing Project
+
+If the project already has a `.specify/` directory committed to the repository, no initialization is needed. The `.specify/` directory travels with the repo. You only need `specify-cli` installed locally:
+
+```bash
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@vX.Y.Z
+```
+
+---
 
 **Git hooks are pre-configured.** When you run `/speckit-specify`, it will automatically offer to create a git feature branch. When you finish a step, it will offer to auto-commit. These are optional hooks — you will be prompted each time.
 
