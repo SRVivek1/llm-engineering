@@ -3,7 +3,7 @@ title: LangChain Framework Guide
 subtitle: A comprehensive deep dive into the architecture, capabilities, and strategic implementation of LangChain for agentic AI.
 excerpt: Master LangChain: Explore its modular architecture, core components like Agents and RAG, and expert best practices for building scalable LLM applications.
 layout: unique-url-layout
-permalink: /llm-eng/langchain/framework-overview/
+permalink: /llm-eng/langchain/overview/
 tags: [langchain, llm, ai-agents, rag, python]
 date: 2026-05-03 19:01:23 +0530
 ---
