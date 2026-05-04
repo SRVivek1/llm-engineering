@@ -30,6 +30,7 @@ def main():
         input_variables=["information"], template=summary_template
     )
 
+    # OLLAMA_GEMMA3_MODEL is the ollama model name defined in .env file.
     model = os.getenv("OLLAMA_GEMMA3_MODEL")
     ollama = ChatOllama(model=model, temperature=0)
     chain = summary_prompt_template | ollama
