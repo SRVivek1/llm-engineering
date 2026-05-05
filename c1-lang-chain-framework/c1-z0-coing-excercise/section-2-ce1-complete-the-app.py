@@ -119,7 +119,7 @@ def implement_query_model(model, prompt):
         str: The response content
     """
     # TODO: Your implementation here
-    response = model.invoke(prompts=[{"role": "user", "content": prompt}])
+    response = model.invoke(messages=[{"role": "user", "content": prompt}])
     return response.content
 
 
