@@ -22,7 +22,7 @@ resolution-markers = [
 
 [manifest]
 members = [
-    "c1-t2-hello-world-app",
+    "c1-t4-langsmith-integration",
     "llm-engineering",
 ]
 
@@ -493,14 +493,14 @@ wheels = [
 ]
 
 [[package]]
-name = "c1-t2-hello-world-app"
+name = "c1-t4-langsmith-integration"
 version = "0.1.0"
-source = { virtual = "c1-lang-chain-framework/c1-t2-hello-world-app" }
+source = { virtual = "c1-lang-chain-framework/c1-t4-langsmith-integration" }
 dependencies = [
     { name = "black" },
     { name = "isort" },
+    { name = "langchain" },
     { name = "langchain-ollama" },
-    { name = "langchain-openai" },
     { name = "python-dotenv" },
 ]
 
@@ -508,8 +508,8 @@ dependencies = [
 requires-dist = [
     { name = "black", specifier = ">=26.3.1" },
     { name = "isort", specifier = ">=8.0.1" },
+    { name = "langchain", specifier = ">=1.2.17" },
     { name = "langchain-ollama", specifier = ">=1.1.0" },
-    { name = "langchain-openai", specifier = ">=1.2.1" },
     { name = "python-dotenv", specifier = ">=1.2.2" },
 ]
 

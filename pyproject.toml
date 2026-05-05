@@ -54,4 +54,5 @@ dev = [
 [tool.uv.workspace]
 members = [
     "c1-lang-chain-framework/c1-t2-hello-world-app",
+    "c1-lang-chain-framework/c1-t4-langsmith-integration",
 ]
