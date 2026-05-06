@@ -1,15 +1,13 @@
 import os
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain.tools import tool
-
 from langchain_core.messages import HumanMessage
 from langchain_ollama import ChatOllama
-
 from tavily import TavilyClient
 
-# Load .env 
+# Load .env
 load_dotenv()
 
 
@@ -29,8 +27,14 @@ def search(query: str) -> str:
     """
     print(f"Searching for: {query}")
 
-    #Integrate with Tavily Search API
-    response = tavily_client.search(query=query)
+    # Integrate with Tavily Search API
+    try:
+        response = tavily_client.search(query=query)
+        print(f"*******Tavily Search API response:{response}")
+
+    except Exception as e:
+        print(f"*******Error occurred while searching: {e}")
+        response = "This is a dummy response from the search tool. Tavily Search API is not available at present."
     
     return f"Result: {response}"
 
@@ -43,11 +47,13 @@ def main():
     # tools
     tool_list = [search]
 
-    llm = ChatOllama(model= model_name)
+    llm = ChatOllama(model=model_name)
     agent = create_agent(model=llm, tools=tool_list)
 
-    resp = agent.invoke({"messages":[HumanMessage(content="What is the weather like in Delhi today?")]})
-    #print(f"Response - ToolMessage: {resp["messages"][2].content}")
+    resp = agent.invoke(
+        {"messages": [HumanMessage(content="What is the weather like in Delhi today?")]}
+    )
+    # print(f"Response - ToolMessage: {resp["messages"][2].content}")
     print(resp)
 
 
