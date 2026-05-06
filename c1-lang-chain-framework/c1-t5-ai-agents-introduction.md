@@ -8,8 +8,6 @@ tags: [ai-agents, react, langchain, langgraph]
 date: 2026-05-05 09:00:40 +0530
 ---
 
-
-
 ## What are AI Agents ?
 
 Traditional LLM implementations often rely on **hard-coded chains** where the sequence of events is predefined by the developer. While efficient for simple tasks, these "chains" fail when faced with ambiguity or multi-step logic.
@@ -19,6 +17,10 @@ Traditional LLM implementations often rely on **hard-coded chains** where the se
 By combining a model's linguistic intelligence with external **Tools**, agents can interact with the real world, such as calling APIs, querying databases, scanning local system or executing code in an iterative loop until a task is complete.
 
 For your tutorial blog, having a clear and technically precise structure is key. Below is a refined version of your definitions, polished for readability and professional tone while maintaining the "Geekmonks" technical edge.
+
+**Reference:**
+
+- https://docs.langchain.com/oss/python/langchain/agents
 
 ---
 

@@ -55,4 +55,5 @@ dev = [
 members = [
     "c1-lang-chain-framework/c1-t2-hello-world-app",
     "c1-lang-chain-framework/c1-t4-langsmith-integration",
+    "c1-lang-chain-framework/c1-t6-langchain-tavily-search-agent-app",
 ]
