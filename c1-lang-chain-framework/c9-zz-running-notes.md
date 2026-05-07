@@ -50,3 +50,17 @@
   4. Now LLM is called with the response, and because LLM has all the info it choose to return the response and not to invoke anyother tool.
 
 ### Explains the inbuild Tavily tools available in langchain_tavily dependency
+- TavilySearch: Inbuild tool for web searching.
+
+
+### Fromatting the response of LLM using 'Pydantic' library.
+- What is Pydantic ?
+  - Pydantic is the most widely used data validation library for Python.
+  - Fast and extensible, Pydantic plays nicely with your linters/IDE/brain. 
+  - Define how data should be in pure, canonical Python 3.9+; validate it with Pydantic.
+
+
+- Example:
+  - Code:
+    from pydantic import BaseModel, PositiveInt
+    

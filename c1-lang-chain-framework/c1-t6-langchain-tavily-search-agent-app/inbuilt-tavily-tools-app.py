@@ -17,7 +17,7 @@ load_dotenv()
 # LLM Model
 ollama = ChatOllama(model=os.getenv("OLLAMA_QWEN_MODEL", "qwen3.5:0.8b"))
 # Tavily built-in search tool.
-inbuilt_tools = [TavilySearch]
+inbuilt_tools = [TavilySearch(api_key=os.getenv("TAVILY_API_KEY"))]
 
 # Create the agent
 agent = create_agent(model=ollama, tools=inbuilt_tools)
