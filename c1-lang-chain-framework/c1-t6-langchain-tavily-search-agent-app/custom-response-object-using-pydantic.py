@@ -34,7 +34,7 @@ class AgentResponse(BaseModel):
 # LLM Model
 
 # Ollama
-llm_model = ChatOllama(model=os.getenv("OLLAMA_CLOUD_MODEL"))
+llm_model = ChatOllama(model=os.getenv("OLLAMA_CLOUD_MODEL"), temperature=0.0)
 
 # GROQ Model
 """
@@ -44,7 +44,7 @@ llm_model = ChatOllama(model=os.getenv("OLLAMA_CLOUD_MODEL"))
 #llm_model = ChatGroq(model=os.getenv("GROQ_MODEL", "mixtral-8x7b-32768"), api_key=os.getenv("GROQ_API_KEY"))
 
 # Tavily built-in search tool.
-inbuilt_tools = [TavilySearch()]
+inbuilt_tools = [TavilySearch(max=3)]
 
 # Create the agent
 #Pass the response class for the agent
@@ -60,6 +60,7 @@ def main():
     result = agent.invoke({"messages": [HumanMessage(content=search_query)]})
 
     print(result)
+    #print(result["structured_response"])
 
 
 if __name__ == "__main__":
