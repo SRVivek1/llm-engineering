@@ -34,7 +34,7 @@ class AgentResponse(BaseModel):
 # LLM Model
 
 # Ollama
-llm_model = ChatOllama(model=os.getenv("OLLAMA_CLOUD_MODEL"), temperature=0.0)
+llm_model = ChatOllama(model=os.getenv("OLLAMA_CLOUD_GPT_OSS_120B"), temperature=0.0)
 
 # GROQ Model
 """
@@ -56,8 +56,8 @@ def main():
     )
 
     #search_query = "Search for 3 job posting for an AI engineer in bangalore city with langchain skills on linkedin."
-    search_query = "Anthropic latest AI models"
-    result = agent.invoke({"messages": [HumanMessage(content=search_query)]})
+    search_query = "Ai jobs in bangalore with langchain skills on linkedin."
+    result = agent.invoke({"messages": HumanMessage(content=search_query)})
 
     print(result)
     #print(result["structured_response"])
