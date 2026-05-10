@@ -61,8 +61,10 @@ The LLM didn't procssed the AgentResponse schema and retuned usual text response
 
 # Google AI Studio Model
 # Note:gemini-3.1-pro-preview - Is returing the expected 'structured_response' in LLM response.
-llm_model = ChatGoogleGenerativeAI(model=os.getenv("GOOGLE_GEMINI_3_1_PRO_PREVIEW"))
+#llm_model = ChatGoogleGenerativeAI(model=os.getenv("GOOGLE_GEMINI_3_1_PRO_PREVIEW"))
 
+# TEST cheaper model working fine - The depth of analysis is like overview level and not much details, but it is returning the response in expected structured format.
+llm_model = ChatGoogleGenerativeAI(model=os.getenv("GOOGLE_GEMINI_2_5_FLASH_LITE"))
 
 
 # Tavily built-in search tool.
