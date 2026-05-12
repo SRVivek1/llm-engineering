@@ -15,12 +15,14 @@ load_dotenv()
 
 
 # LLM Model
-ollama = ChatOllama(model=os.getenv("OLLAMA_QWEN_MODEL", "qwen3.5:0.8b"))
+#llm_model = ChatOllama(model=os.getenv("OLLAMA_QWEN_MODEL", "qwen3.5:0.8b"))
+llm_model = ChatOllama(model=os.getenv("OLLAMA_CLOUD_GEMMA4_31B"), temperature=0.0)
+
 # Tavily built-in search tool.
 inbuilt_tools = [TavilySearch(api_key=os.getenv("TAVILY_API_KEY"))]
 
 # Create the agent
-agent = create_agent(model=ollama, tools=inbuilt_tools)
+agent = create_agent(model=llm_model, tools=inbuilt_tools)
 
 def main():
     print(
@@ -28,7 +30,7 @@ def main():
     )
 
     #search_query = "Search for 3 job posting for an AI engineer in bangalore city with langchain skills on linkedin."
-    search_query = "Anthropic latest AI models"
+    search_query = "Jobs for AI engineers in bangalore city with langchain skills on linkedin."
     result = agent.invoke({"messages": [HumanMessage(content=search_query)]})
 
     print(result)
